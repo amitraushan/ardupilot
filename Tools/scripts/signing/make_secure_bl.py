@@ -16,7 +16,7 @@ except ImportError:
 # get command line arguments
 from argparse import ArgumentParser
 parser = ArgumentParser(description='make_secure_bl')
-parser.add_argument("--omit-ardupilot-keys", action='store_true', default=False, help="omit ArduPilot signing keys")
+parser.add_argument("--omit-ardupilot-keys", action='store_true', default=True, help="omit ArduPilot signing keys")
 parser.add_argument("bootloader", type=str, default=None, help="bootloader")
 parser.add_argument("keys", nargs='*', type=str, default=[], help="keys")
 args = parser.parse_args()

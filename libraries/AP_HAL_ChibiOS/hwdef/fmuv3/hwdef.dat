@@ -431,7 +431,7 @@ define HAL_BOARD_TERRAIN_DIRECTORY "/APM/TERRAIN"
 
 # We need to tell HAL_ChibiOS/Storage.cpp how much storage is
 # available (in bytes).
-define HAL_STORAGE_SIZE 16384
+define HAL_STORAGE_SIZE 32768
 
 # allow to have have a dedicated safety switch pin
 define HAL_HAVE_SAFETY_SWITCH 1
@@ -453,8 +453,8 @@ define HAL_OS_FATFS_IO 1
 # scaling for the power brick.
 define HAL_BATT_VOLT_PIN 2
 define HAL_BATT_CURR_PIN 3
-define HAL_BATT_VOLT_SCALE 10.1
-define HAL_BATT_CURR_SCALE 17.0
+define HAL_BATT_VOLT_SCALE 10.7
+define HAL_BATT_CURR_SCALE 22.3
 
 # This defines the default maximum clock on I2C devices.
 define HAL_I2C_MAX_CLOCK 100000
@@ -475,3 +475,12 @@ define HAL_SOLO_GIMBAL_ENABLED (HAL_MOUNT_ENABLED && BOARD_FLASH_SIZE > 1024)
 
 # produce this error if we are on a 1M board
 define BOARD_CHECK_F427_USE_1M "ERROR: 1M flash use fmuv2"
+
+# Disable un-needed hardware drivers
+define AP_BARO_BMP085_ENABLED 0
+define AP_BARO_BMP280_ENABLED 0
+define AP_BARO_BMP388_ENABLED 0
+define AP_BARO_DPS280_ENABLED 0
+define AP_BARO_FBM320_ENABLED 0
+define AP_BARO_ICP101XX_ENABLED 0 
+define AP_BARO_ICP201XX_ENABLED 0
