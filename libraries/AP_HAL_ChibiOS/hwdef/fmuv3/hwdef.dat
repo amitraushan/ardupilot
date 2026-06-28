@@ -453,8 +453,8 @@ define HAL_OS_FATFS_IO 1
 # scaling for the power brick.
 define HAL_BATT_VOLT_PIN 2
 define HAL_BATT_CURR_PIN 3
-define HAL_BATT_VOLT_SCALE 10.1
-define HAL_BATT_CURR_SCALE 17.0
+define HAL_BATT_VOLT_SCALE 10.0
+define HAL_BATT_CURR_SCALE 30.0
 
 # This defines the default maximum clock on I2C devices.
 define HAL_I2C_MAX_CLOCK 100000
